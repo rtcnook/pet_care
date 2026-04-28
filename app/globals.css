@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fffaf3;
+  --surface: rgba(255, 255, 255, 0.82);
+  --surface-strong: #ffffff;
+  --ink: #2b2622;
+  --muted: #6b625a;
+  --brand: #ff8f5b;
+  --brand-deep: #ef6f39;
+  --accent: #6fcf97;
+  --line: rgba(43, 38, 34, 0.08);
+  --shadow: 0 22px 50px rgba(167, 109, 69, 0.14);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(255, 187, 145, 0.45), transparent 28%),
+    radial-gradient(circle at right 15%, rgba(111, 207, 151, 0.24), transparent 24%),
+    linear-gradient(180deg, #fff8ef 0%, #fffdf8 45%, #fff5ea 100%);
+  color: var(--ink);
+}
+
+body::selection {
+  background: rgba(255, 143, 91, 0.28);
+}
+
+.page-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.glass-panel {
+  background: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow: var(--shadow);
+}
+
+.surface-panel {
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

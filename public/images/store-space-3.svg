@@ -1,0 +1,24 @@
+<svg width="1600" height="1100" viewBox="0 0 1600 1100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="140" y1="110" x2="1430" y2="1030" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C39A7B"/>
+      <stop offset="1" stop-color="#745845"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1100" fill="url(#bg3)"/>
+  <rect x="84" y="84" width="1432" height="932" rx="42" fill="#E5D4C5"/>
+  <rect x="138" y="134" width="1324" height="146" rx="30" fill="#FCF3EA"/>
+  <rect x="198" y="184" width="422" height="34" rx="17" fill="#C7A28B"/>
+  <rect x="138" y="336" width="572" height="620" rx="36" fill="#F8EDE3"/>
+  <rect x="760" y="336" width="702" height="620" rx="36" fill="#EEE1D2"/>
+  <rect x="216" y="420" width="416" height="172" rx="26" fill="#FFF8F0"/>
+  <rect x="216" y="644" width="416" height="214" rx="26" fill="#C8DECE"/>
+  <rect x="838" y="418" width="546" height="272" rx="28" fill="#D39D71"/>
+  <rect x="916" y="746" width="390" height="124" rx="20" fill="#FFF7EF"/>
+  <circle cx="1112" cy="616" r="102" fill="#DED0C1"/>
+  <ellipse cx="1112" cy="654" rx="126" ry="92" fill="#F8EEE4"/>
+  <circle cx="1068" cy="620" r="11" fill="#5A463C"/>
+  <circle cx="1150" cy="620" r="11" fill="#5A463C"/>
+  <path d="M1068 684C1094 706 1128 706 1154 684" stroke="#8F6959" stroke-width="12" stroke-linecap="round"/>
+  <text x="212" y="890" fill="#6C574B" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">接待台 · 等候沙发 · 进店安抚</text>
+</svg>

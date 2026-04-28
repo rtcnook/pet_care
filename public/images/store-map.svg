@@ -1,0 +1,20 @@
+<svg width="1200" height="680" viewBox="0 0 1200 680" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="680" fill="#F3ECE2"/>
+  <rect x="36" y="36" width="1128" height="608" rx="28" fill="#FAF6EF"/>
+  <path d="M122 120H1072" stroke="#E4D9CB" stroke-width="18" stroke-linecap="round"/>
+  <path d="M120 520H1040" stroke="#E4D9CB" stroke-width="24" stroke-linecap="round"/>
+  <path d="M250 60V620" stroke="#DED3C5" stroke-width="16" stroke-linecap="round"/>
+  <path d="M612 92V614" stroke="#E3D8CA" stroke-width="12" stroke-linecap="round"/>
+  <path d="M930 100V620" stroke="#DDD2C4" stroke-width="20" stroke-linecap="round"/>
+  <path d="M120 300H1080" stroke="#D9CDBE" stroke-width="14" stroke-linecap="round"/>
+  <rect x="136" y="146" width="160" height="108" rx="18" fill="#D9EBD7"/>
+  <rect x="694" y="340" width="164" height="120" rx="18" fill="#D9EBD7"/>
+  <rect x="292" y="364" width="140" height="112" rx="18" fill="#E8F0D9"/>
+  <rect x="980" y="164" width="92" height="76" rx="16" fill="#F7D3B2"/>
+  <rect x="458" y="152" width="120" height="74" rx="16" fill="#F7D3B2"/>
+  <path d="M615 255C662 255 700 293 700 340C700 399 645 455 615 487C585 455 530 399 530 340C530 293 568 255 615 255Z" fill="#FF8350"/>
+  <circle cx="615" cy="340" r="38" fill="#FFF3E8"/>
+  <circle cx="615" cy="340" r="16" fill="#FFB081"/>
+  <rect x="84" y="564" width="304" height="48" rx="24" fill="#FFF5EB"/>
+  <text x="116" y="595" fill="#7B6F67" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">南京西路 889 号</text>
+</svg>
