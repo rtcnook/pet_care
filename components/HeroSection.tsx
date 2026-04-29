@@ -51,7 +51,7 @@ export function HeroSection() {
         <div className="grid gap-4">
           <Reveal className="relative overflow-hidden rounded-[34px] shadow-[var(--shadow)]" delay={90}>
             <Image
-              src="/images/hero-main.svg"
+              src="/images/ai-hero-main.png"
               alt="高级宠物洗护门店主视觉"
               width={1200}
               height={900}

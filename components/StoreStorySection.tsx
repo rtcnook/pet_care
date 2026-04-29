@@ -27,7 +27,7 @@ export function StoreStorySection() {
         <Reveal className="overflow-hidden rounded-[30px] shadow-[var(--shadow)]" delay={20}>
           <div className="relative">
             <Image
-              src="/images/store-story.svg"
+              src="/images/ai-store-story.png"
               alt="宠物洗护店到店护理流程配图"
               width={1200}
               height={1400}

@@ -46,46 +46,48 @@ export function BookingSection() {
               <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
                 营业时间 10:00 - 20:00，建议至少提前半天预约。第一次到店可以在备注里写上宠物年龄、体重、性格和特殊护理需求。
               </p>
-              <ul className="mt-4 grid gap-2.5 text-sm leading-7 text-[var(--muted)]">
-                <li className="flex gap-2.5">
-                  <span className="font-bold text-[var(--brand-deep)]">•</span>
-                  <span>地址: 上海市静安区南京西路 889 号</span>
-                </li>
-                <li className="flex gap-2.5">
-                  <span className="font-bold text-[var(--brand-deep)]">•</span>
-                  <span>电话: 400-888-2026</span>
-                </li>
-                <li className="flex gap-2.5">
-                  <span className="font-bold text-[var(--brand-deep)]">•</span>
-                  <span>支持微信预约与到店咨询</span>
-                </li>
-              </ul>
+              <div className="mt-[18px] grid items-start gap-4 xl:grid-cols-[0.78fr_1.22fr]">
+                <ul className="grid gap-2.5 text-sm leading-7 text-[var(--muted)]">
+                  <li className="flex gap-2.5">
+                    <span className="font-bold text-[var(--brand-deep)]">•</span>
+                    <span>地址: 上海市静安区南京西路 889 号</span>
+                  </li>
+                  <li className="flex gap-2.5">
+                    <span className="font-bold text-[var(--brand-deep)]">•</span>
+                    <span>电话: 400-888-2026</span>
+                  </li>
+                  <li className="flex gap-2.5">
+                    <span className="font-bold text-[var(--brand-deep)]">•</span>
+                    <span>支持微信预约与到店咨询</span>
+                  </li>
+                </ul>
 
-              <div className="mt-[18px] overflow-hidden rounded-[24px] border border-[rgba(43,38,34,0.08)] bg-white/82 shadow-[var(--shadow)]">
-                <a
-                  href="https://www.openstreetmap.org/?mlat=31.231&mlon=121.445#map=17/31.231/121.445"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="block"
-                >
-                  <Image
-                    src="/images/store-map.svg"
-                    alt="泡泡爪爪宠物洗护门店地图"
-                    width={1200}
-                    height={680}
-                    className="block h-[220px] w-full object-cover"
-                  />
-                </a>
-                <div className="flex flex-col items-start justify-between gap-3 px-[18px] py-4 text-sm text-[var(--muted)] sm:flex-row sm:items-center">
-                  <span>地图定位到门店周边，方便到店前先看路线。</span>
+                <div className="overflow-hidden rounded-[24px] border border-[rgba(43,38,34,0.08)] bg-white/82 shadow-[var(--shadow)]">
                   <a
                     href="https://www.openstreetmap.org/?mlat=31.231&mlon=121.445#map=17/31.231/121.445"
                     target="_blank"
                     rel="noreferrer"
-                    className="font-bold text-[var(--brand-deep)]"
+                    className="block"
                   >
-                    在新窗口打开地图
+                    <Image
+                      src="/images/ai-store-map.png"
+                      alt="泡泡爪爪宠物洗护门店地图"
+                      width={1200}
+                      height={680}
+                      className="block h-[220px] w-full object-cover xl:h-[190px]"
+                    />
                   </a>
+                  <div className="flex flex-col items-start justify-between gap-3 px-[18px] py-4 text-sm text-[var(--muted)] sm:flex-row sm:items-center xl:flex-col xl:items-start 2xl:flex-row 2xl:items-center">
+                    <span>地图定位到门店周边，方便到店前先看路线。</span>
+                    <a
+                      href="https://www.openstreetmap.org/?mlat=31.231&mlon=121.445#map=17/31.231/121.445"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="font-bold text-[var(--brand-deep)]"
+                    >
+                      在新窗口打开地图
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

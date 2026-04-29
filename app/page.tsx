@@ -8,25 +8,25 @@ import { StoreStorySection } from "@/components/StoreStorySection";
 
 const carouselSlides = [
   {
-    src: "/images/store-space-1.svg",
+    src: "/images/ai-store-space-1.png",
     title: "独立洗护区",
     description: "独立浴台、暖光镜面和透明操作动线，适合做高净值感的精洗服务。",
     alt: "高级宠物洗护店的独立洗护区"
   },
   {
-    src: "/images/store-space-2.svg",
+    src: "/images/ai-store-space-2.png",
     title: "低噪烘干整理区",
     description: "烘干与修整分开布置，保留安静氛围，让长毛梳理和造型整理更从容。",
     alt: "高级宠物洗护店的烘干整理区"
   },
   {
-    src: "/images/store-space-3.svg",
+    src: "/images/ai-store-space-3.png",
     title: "接待等待区",
     description: "进店先有缓冲和安抚空间，宠物和主人都能先把节奏放慢一点。",
     alt: "高级宠物洗护店的接待等待区"
   },
   {
-    src: "/images/store-space-4.svg",
+    src: "/images/ai-store-space-4.png",
     title: "精细护理区",
     description: "耳部清洁、修爪、护毛和洗后整理都在更整洁明亮的护理台完成。",
     alt: "高级宠物洗护店的精细护理区"
@@ -46,15 +46,8 @@ export default function Home() {
       <header className="sticky top-0 z-30 border-b border-[rgba(43,38,34,0.06)] bg-[rgba(255,250,243,0.75)] backdrop-blur-[14px]">
         <div className="page-shell flex flex-wrap items-center justify-between gap-6 py-4">
           <a href="#top" className="flex items-center gap-3 font-bold tracking-normal">
-            <span className="relative grid h-[42px] w-[42px] place-items-center rounded-[14px] bg-gradient-to-br from-[#ffd19f] to-[#ff9c6a] shadow-[0_12px_22px_rgba(255,143,91,0.28)]">
-              <span className="relative block h-[27px] w-[27px]" aria-hidden="true">
-                <span className="absolute left-[8px] top-[12px] h-[10px] w-3 rotate-[10deg] rounded-[58%] bg-[#312a52]" />
-                <span className="absolute left-0.5 top-[7px] h-1.5 w-1.5 rounded-full bg-[#312a52]" />
-                <span className="absolute left-[7px] top-0.5 h-1.5 w-1.5 rounded-full bg-[#312a52]" />
-                <span className="absolute left-[15px] top-[3px] h-1.5 w-1.5 rounded-full bg-[#312a52]" />
-                <span className="absolute left-[21px] top-2 h-[5px] w-[5px] rounded-full bg-[#312a52]" />
-                <span className="absolute right-0 bottom-px h-1.5 w-[7px] rounded-full bg-[#6e5a96]" />
-              </span>
+            <span className="grid h-[42px] w-[42px] place-items-center rounded-[14px] bg-gradient-to-br from-[#ffd19f] to-[#ff9c6a] text-[22px] shadow-[0_12px_22px_rgba(255,143,91,0.28)]">
+              🐾
             </span>
             <span>泡泡爪爪宠物洗护</span>
           </a>
