@@ -85,9 +85,44 @@
       border-radius: 14px;
       display: grid;
       place-items: center;
-      font-size: 22px;
       background: linear-gradient(135deg, #ffd19f, #ff9c6a);
       box-shadow: 0 12px 22px rgba(255, 143, 91, 0.28);
+    }
+
+    .paw-cluster {
+      position: relative;
+      width: 27px;
+      height: 27px;
+      display: block;
+    }
+
+    .paw-cluster i {
+      position: absolute;
+      display: block;
+      border-radius: 50%;
+      background: #312a52;
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    }
+
+    .paw-cluster .pad {
+      left: 8px;
+      top: 12px;
+      width: 12px;
+      height: 10px;
+      border-radius: 58% 58% 52% 52%;
+      transform: rotate(10deg);
+    }
+
+    .paw-cluster .toe-1 { left: 2px; top: 7px; width: 6px; height: 6px; }
+    .paw-cluster .toe-2 { left: 7px; top: 2px; width: 6px; height: 6px; }
+    .paw-cluster .toe-3 { left: 15px; top: 3px; width: 6px; height: 6px; }
+    .paw-cluster .toe-4 { left: 21px; top: 8px; width: 5px; height: 5px; }
+    .paw-cluster .tiny {
+      right: 0;
+      bottom: 1px;
+      width: 7px;
+      height: 6px;
+      background: #6e5a96;
     }
 
     .nav-links {
@@ -394,26 +429,97 @@
       align-items: stretch;
     }
 
-    .story-photo {
+    .story-carousel {
+      position: relative;
       min-height: 440px;
       border-radius: 30px;
       overflow: hidden;
       box-shadow: var(--shadow);
-      background:
-        linear-gradient(180deg, rgba(43, 38, 34, 0.08), rgba(43, 38, 34, 0.12)),
-        url("https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=1200&q=80") center/cover;
+      background: #f7efe6;
+    }
+
+    .story-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.65s ease;
+    }
+
+    .story-slide.active {
+      opacity: 1;
+    }
+
+    .story-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .story-slide::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(43, 38, 34, 0.02), rgba(43, 38, 34, 0.38));
+    }
+
+    .story-caption {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 20px;
+      z-index: 1;
+      color: #fff;
+    }
+
+    .story-caption strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 24px;
+    }
+
+    .story-caption span {
+      display: block;
+      max-width: 34ch;
+      font-size: 14px;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.86);
+    }
+
+    .story-dots {
+      position: absolute;
+      right: 20px;
+      bottom: 24px;
+      z-index: 2;
+      display: flex;
+      gap: 9px;
+    }
+
+    .story-dot {
+      width: 10px;
+      height: 10px;
+      border: 0;
+      border-radius: 50%;
+      padding: 0;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.55);
+    }
+
+    .story-dot.active {
+      background: #fff;
     }
 
     .story-copy {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(2, minmax(0, 1fr));
       gap: 18px;
-      align-content: start;
+      align-content: stretch;
     }
 
     .info-card {
       padding: 24px;
       border-radius: 24px;
+      height: 100%;
     }
 
     .pricing {
@@ -472,10 +578,7 @@
     }
 
     .space-showcase {
-      display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
-      gap: 20px;
-      align-items: stretch;
+      display: block;
     }
 
     .carousel-shell {
@@ -486,6 +589,10 @@
       box-shadow: var(--shadow);
       background: #f7efe6;
       isolation: isolate;
+    }
+
+    .space-showcase .carousel-shell {
+      width: 100%;
     }
 
     .carousel-track {
@@ -710,6 +817,13 @@
       display: block;
     }
 
+    .map-image {
+      width: 100%;
+      height: 220px;
+      display: block;
+      object-fit: cover;
+    }
+
     .map-meta {
       display: flex;
       justify-content: space-between;
@@ -889,7 +1003,16 @@
   <header class="site-header">
     <div class="shell nav">
       <a class="brand" href="#top" aria-label="泡泡爪爪宠物洗护首页">
-        <span class="brand-mark">🐾</span>
+        <span class="brand-mark" aria-hidden="true">
+          <span class="paw-cluster">
+            <i class="toe-1"></i>
+            <i class="toe-2"></i>
+            <i class="toe-3"></i>
+            <i class="toe-4"></i>
+            <i class="pad"></i>
+            <i class="tiny"></i>
+          </span>
+        </span>
         <span>泡泡爪爪宠物洗护</span>
       </a>
       <nav class="nav-links">
@@ -1005,7 +1128,42 @@
 
     <section id="space">
       <div class="shell story-grid">
-        <div class="story-photo reveal"></div>
+        <div class="story-carousel reveal" data-story-carousel>
+          <article class="story-slide active">
+            <img src="public/images/store-space-3.svg" alt="门店接待等待区">
+            <div class="story-caption">
+              <strong>接待等待区</strong>
+              <span>进店先缓一缓，让宠物熟悉气味和环境，再进入洗护流程。</span>
+            </div>
+          </article>
+          <article class="story-slide">
+            <img src="public/images/store-space-1.svg" alt="独立洗护区">
+            <div class="story-caption">
+              <strong>独立洗护区</strong>
+              <span>一宠一位的洗护台，减少陌生宠物互相打扰。</span>
+            </div>
+          </article>
+          <article class="story-slide">
+            <img src="public/images/store-space-2.svg" alt="低噪烘干整理区">
+            <div class="story-caption">
+              <strong>低噪烘干区</strong>
+              <span>烘干、梳理和造型分区完成，节奏更稳。</span>
+            </div>
+          </article>
+          <article class="story-slide">
+            <img src="public/images/store-space-4.svg" alt="精细护理区">
+            <div class="story-caption">
+              <strong>精细护理区</strong>
+              <span>耳部清洁、修爪和护毛整理都在明亮护理台完成。</span>
+            </div>
+          </article>
+          <div class="story-dots">
+            <button class="story-dot active" type="button" aria-label="接待等待区"></button>
+            <button class="story-dot" type="button" aria-label="独立洗护区"></button>
+            <button class="story-dot" type="button" aria-label="低噪烘干区"></button>
+            <button class="story-dot" type="button" aria-label="精细护理区"></button>
+          </div>
+        </div>
         <div class="story-copy">
           <article class="info-card reveal">
             <h3>进店先观察</h3>
@@ -1104,26 +1262,6 @@
             </div>
           </div>
 
-          <div class="space-aside">
-            <article class="space-note reveal">
-              <h3>高级感来自秩序</h3>
-              <p>不是堆装饰，而是让灯光、材质、清洁度和操作动线一起服务宠物洗护本身。</p>
-            </article>
-            <article class="space-note reveal">
-              <h3>轮播可换成 AI 图</h3>
-              <p>我已经把这一块做成独立轮播组件，后面只要替换 `img` 地址，就能直接切成你想要的门店效果图。</p>
-            </article>
-            <article class="space-note reveal">
-              <h3>快速跳转</h3>
-              <p>支持自动播放、手动切换和指示点定位，手机端也会自动收成单列布局。</p>
-              <div class="space-dots" data-carousel-dots>
-                <button class="space-dot active" type="button" aria-label="查看第 1 张"></button>
-                <button class="space-dot" type="button" aria-label="查看第 2 张"></button>
-                <button class="space-dot" type="button" aria-label="查看第 3 张"></button>
-                <button class="space-dot" type="button" aria-label="查看第 4 张"></button>
-              </div>
-            </article>
-          </div>
         </div>
       </div>
     </section>
@@ -1186,13 +1324,9 @@
             <li>支持微信预约与到店咨询</li>
           </ul>
           <div class="map-card">
-            <iframe
-              class="map-frame"
-              title="泡泡爪爪宠物洗护门店地图"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=121.438%2C31.224%2C121.452%2C31.238&layer=mapnik&marker=31.231%2C121.445">
-            </iframe>
+            <a href="https://www.openstreetmap.org/?mlat=31.231&mlon=121.445#map=17/31.231/121.445" target="_blank" rel="noreferrer">
+              <img class="map-image" src="public/images/store-map.svg" alt="泡泡爪爪宠物洗护可爱地图">
+            </a>
             <div class="map-meta">
               <span>地图定位到门店周边，方便到店前先看路线。</span>
               <a href="https://www.openstreetmap.org/?mlat=31.231&mlon=121.445#map=17/31.231/121.445" target="_blank" rel="noreferrer">在新窗口打开地图</a>
@@ -1232,6 +1366,10 @@
             <div class="field">
               <label for="date">预约日期</label>
               <input id="date" name="date" type="date">
+            </div>
+            <div class="field">
+              <label for="time">预约时间</label>
+              <input id="time" name="time" type="time" min="10:00" max="20:00" step="1800">
             </div>
             <div class="field">
               <label for="phone">联系电话</label>
@@ -1322,6 +1460,31 @@
 
       renderCarousel(0);
       restartAutoplay();
+    }
+
+    const storyCarousel = document.querySelector("[data-story-carousel]");
+    if (storyCarousel) {
+      const storySlides = Array.from(storyCarousel.querySelectorAll(".story-slide"));
+      const storyDots = Array.from(storyCarousel.querySelectorAll(".story-dot"));
+      let storyIndex = 0;
+
+      const renderStory = (nextIndex) => {
+        storyIndex = (nextIndex + storySlides.length) % storySlides.length;
+        storySlides.forEach((slide, index) => {
+          slide.classList.toggle("active", index === storyIndex);
+        });
+        storyDots.forEach((dot, index) => {
+          dot.classList.toggle("active", index === storyIndex);
+        });
+      };
+
+      storyDots.forEach((dot, index) => {
+        dot.addEventListener("click", () => renderStory(index));
+      });
+
+      window.setInterval(() => {
+        renderStory(storyIndex + 1);
+      }, 3600);
     }
 
     const form = document.querySelector(".booking-form");

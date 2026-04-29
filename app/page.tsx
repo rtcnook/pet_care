@@ -46,8 +46,15 @@ export default function Home() {
       <header className="sticky top-0 z-30 border-b border-[rgba(43,38,34,0.06)] bg-[rgba(255,250,243,0.75)] backdrop-blur-[14px]">
         <div className="page-shell flex flex-wrap items-center justify-between gap-6 py-4">
           <a href="#top" className="flex items-center gap-3 font-bold tracking-normal">
-            <span className="grid h-[42px] w-[42px] place-items-center rounded-[14px] bg-gradient-to-br from-[#ffd19f] to-[#ff9c6a] text-[22px] shadow-[0_12px_22px_rgba(255,143,91,0.28)]">
-              🐾
+            <span className="relative grid h-[42px] w-[42px] place-items-center rounded-[14px] bg-gradient-to-br from-[#ffd19f] to-[#ff9c6a] shadow-[0_12px_22px_rgba(255,143,91,0.28)]">
+              <span className="relative block h-[27px] w-[27px]" aria-hidden="true">
+                <span className="absolute left-[8px] top-[12px] h-[10px] w-3 rotate-[10deg] rounded-[58%] bg-[#312a52]" />
+                <span className="absolute left-0.5 top-[7px] h-1.5 w-1.5 rounded-full bg-[#312a52]" />
+                <span className="absolute left-[7px] top-0.5 h-1.5 w-1.5 rounded-full bg-[#312a52]" />
+                <span className="absolute left-[15px] top-[3px] h-1.5 w-1.5 rounded-full bg-[#312a52]" />
+                <span className="absolute left-[21px] top-2 h-[5px] w-[5px] rounded-full bg-[#312a52]" />
+                <span className="absolute right-0 bottom-px h-1.5 w-[7px] rounded-full bg-[#6e5a96]" />
+              </span>
             </span>
             <span>泡泡爪爪宠物洗护</span>
           </a>

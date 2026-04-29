@@ -123,6 +123,17 @@ export function BookingSection() {
               <Field label="预约日期" htmlFor="date">
                 <input id="date" name="date" type="date" className={inputClassName} />
               </Field>
+              <Field label="预约时间" htmlFor="time">
+                <input
+                  id="time"
+                  name="time"
+                  type="time"
+                  min="10:00"
+                  max="20:00"
+                  step="1800"
+                  className={inputClassName}
+                />
+              </Field>
               <Field label="联系电话" htmlFor="phone">
                 <input id="phone" name="phone" type="tel" placeholder="请输入手机号码" className={inputClassName} />
               </Field>
